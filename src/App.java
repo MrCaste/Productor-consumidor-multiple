@@ -22,12 +22,11 @@ public class App {
         } catch (InterruptedException e) {
             e.printStackTrace(); 
         }
+        Consumidor[] consumers = new Consumidor[4];
+        consumidores.enumerate(consumers);
 
         producer.interrupt();
         consumidores.interrupt();
-
-        Consumidor[] consumers = new Consumidor[4];
-        consumidores.enumerate(consumers);
 
         for (int i = 0; i < consumers.length; i++) {
             try {
